@@ -1205,30 +1205,35 @@ body {
  </style>
 </head>
 <body>
-                        <nav class="navbar navbar-expand-lg sticky-top glass-navbar">
-  <div class="container">
+<nav class="glass-navbar">
+  <div class="container" style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
     <a class="navbar-brand" href="#">Rajesh QA</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-        <li class="nav-item"><a class="nav-link" href="#academic-projects">Academic Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-      <button class="btn-theme-glow ms-3" id="themeToggle" aria-label="Toggle Theme">
+    <!-- Hamburger Icon
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div> -->
+
+    <!-- Navigation Links -->
+    <div class="nav-links" id="navLinks">
+      <a class="nav-link" href="#home">Home</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#skills">Skills</a>
+      <a class="nav-link" href="#experience">Experience</a>
+      <a class="nav-link" href="#projects">Projects</a>
+      <a class="nav-link" href="#education">Education</a>
+      <a class="nav-link" href="#academic-projects">Academic Projects</a>
+      <a class="nav-link" href="#contact">Contact</a>
+
+      <button class="btn-theme-glow" id="themeToggle" aria-label="Toggle Theme" style="margin-top: 10px;">
         <i class="bi bi-moon-stars" id="themeIcon"></i>
       </button>
     </div>
   </div>
-</nav>  
+</nav>
+  
 
 
 <section id="home" class="hero-section d-flex align-items-center">
