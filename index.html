@@ -1195,7 +1195,7 @@ body {
 }
 
 /* Responsive for mobile */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
@@ -1907,44 +1907,6 @@ body {
     });
   });
 </script>
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('navLinks');
-  const navLinkItems = document.querySelectorAll('.nav-link');
-
-  // Toggle mobile menu
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-
-  // Auto-collapse when a nav link is clicked
-  navLinkItems.forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 992) {
-        navLinks.classList.remove('show');
-      }
-    });
-  });
-</script>
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('navLinks');
-  const navItems = document.querySelectorAll('.nav-link');
-
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-
-  navItems.forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 992) {
-        navLinks.classList.remove('show');
-      }
-    });
-  });
-</script>
-
-
 <!-- ✅ Bootstrap JS (MUST for navbar toggle to work) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
