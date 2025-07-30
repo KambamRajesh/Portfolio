@@ -1483,7 +1483,7 @@ body {
                 <li>Data-driven + Page Object Model</li>
                 <li>Integrated Jenkins + Extent Reports</li>
               </ul>
-              <a href="https://github.com/KambamRajesh/Demo-WebShop" target="_blank" class="btn btn-outline-primary btn-sm me-2"><i class="bi bi-github"></i> Code</a>
+              <a href="https://github.com/KambamRajesh/Demo-WebShop/tree/main/Final-DemoWebShop-main/DemoWebShop" target="_blank" class="btn btn-outline-primary btn-sm me-2"><i class="bi bi-github"></i> Code</a>
               <a href="https://your-demo-link.com" target="_blank" class="btn btn-primary btn-sm"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
             </div>
           </div>
@@ -1523,7 +1523,7 @@ body {
                 <li>Schema validation + TestNG + Allure</li>
                 <li>Covered edge cases & error handling</li>
               </ul>
-              <a href="https://github.com/YourGithub/rest-api-suite" target="_blank" class="btn btn-outline-info btn-sm me-2"><i class="bi bi-github"></i> Code</a>
+              <a href="https://github.com/KambamRajesh/REST-Assured-API-Test-Suite/tree/main/RestAssuredAPI" target="_blank" class="btn btn-outline-info btn-sm me-2"><i class="bi bi-github"></i> Code</a>
               <a href="https://your-demo-link.com" target="_blank" class="btn btn-info btn-sm text-white"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
             </div>
           </div>
@@ -1804,7 +1804,7 @@ body {
 
   navLinkItems.forEach(link => {
     link.addEventListener('click', () => {
-      if (window.innerWidth <= 992) {
+      if (window.innerWidth <= 768) {
         navLinks.classList.remove('show');
       }
     });
@@ -1826,26 +1826,6 @@ body {
     document.body.classList.toggle('dark-mode');
     themeIcon.classList.toggle('bi-sun');
     themeIcon.classList.toggle('bi-moon-stars');
-  });
-</script>
-
-<script>
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('navLinks');
-  const navLinkItems = document.querySelectorAll('.nav-link');
-
-  // Toggle mobile menu
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-  });
-
-  // 👉 Close menu when any link is clicked (mobile only)
-  navLinkItems.forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 768) {
-        navLinks.classList.remove('show');
-      }
-    });
   });
 </script>
 
