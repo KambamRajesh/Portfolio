@@ -1260,6 +1260,183 @@ body {
       box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
     }
 
+/* DARK MODE STYLES */
+.dark-mode {
+  background-color: #0d1117;
+  color: #e6edf3;
+}
+
+/* Navbar in dark mode */
+.dark-mode .glass-navbar {
+  background: rgba(13, 17, 23, 0.9);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .navbar-brand {
+  color: #58a6ff;
+}
+
+.dark-mode .nav-link {
+  color: #e6edf3 !important;
+}
+
+.dark-mode .nav-link:hover {
+  color: #58a6ff !important;
+  background-color: rgba(88, 166, 255, 0.1);
+}
+
+.dark-mode .nav-link.active {
+  background-color: rgba(88, 166, 255, 0.15);
+  color: #58a6ff !important;
+}
+
+/* Button Glow in dark mode */
+.dark-mode .btn-theme-glow {
+  background: #58a6ff;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(88, 166, 255, 0.7);
+}
+
+/* Smooth transition */
+body,
+.navbar,
+.navbar-brand,
+.nav-link,
+.btn-theme-glow {
+  transition: all 0.3s ease;
+}
+
+/* Optional: headings and sections */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p,
+.dark-mode span {
+  color: #e6edf3;
+}
+
+/* Optional: section backgrounds */
+.dark-mode section {
+  background-color: #161b22;
+}
+
+/* Optional: if you're using Bootstrap table or cards */
+.dark-mode .card {
+  background-color: #161b22;
+  color: #e6edf3;
+}
+
+.dark-mode .table {
+  color: #e6edf3;
+  background-color: #161b22;
+}
+
+.dark-mode {
+  background-color: #0d1117 !important;
+  color: #e6edf3 !important;
+}
+
+.dark-mode * {
+  color: #e6edf3 !important;
+  background-color: transparent !important;
+}
+.dark-mode section,
+.dark-mode .container,
+.dark-mode .card,
+.dark-mode .content-box {
+  background-color: #161b22 !important;
+  color: #e6edf3 !important;
+}
+/* Flip card fix in dark mode */
+.dark-mode .flip-card {
+  background-color: transparent !important;
+}
+
+.dark-mode .flip-card-inner {
+  background-color: transparent !important;
+}
+
+.dark-mode .flip-card-front,
+.dark-mode .flip-card-back {
+  background-color: #1f2937 !important;  /* dark gray-blue */
+  color: #e6edf3 !important;
+  border: 1px solid #444;
+}
+.dark-mode .flip-card:hover .flip-card-front {
+  box-shadow: 0 0 12px rgba(0, 123, 255, 0.5);
+}
+
+.dark-mode .flip-card-back a {
+  color: #58a6ff !important;
+}
+/* === DARK MODE SUPPORT === */
+.dark-mode {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+
+.dark-mode .section {
+  background: linear-gradient(to right, #1e1e1e, #2c2c2c) !important;
+}
+
+.dark-mode .flip-front {
+  background: linear-gradient(135deg, #2e2e2e, #3a3a3a) !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .flip-back {
+  background: linear-gradient(135deg, #4a148c, #880e4f) !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .flip-card-front {
+  background: linear-gradient(145deg, #303030, #444) !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .flip-card-back {
+  background: linear-gradient(145deg, #1a237e, #4a148c) !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .tech-badge {
+  background-color: #2c2c2c !important;
+  color: #ffffff !important;
+  border-color: #555 !important;
+}
+
+.dark-mode .btn,
+.dark-mode .btn-outline-primary,
+.dark-mode .btn-outline-success,
+.dark-mode .btn-outline-info {
+  color: #ffffff !important;
+  border-color: #888 !important;
+}
+
+.dark-mode .btn:hover {
+  background-color: #555 !important;
+  border-color: #aaa !important;
+}
+
+.dark-mode .text-dark {
+  color: #f1f1f1 !important;
+}
+
+.dark-mode .bg-white {
+  background-color: #2c2c2c !important;
+}
+
+/* Optional: override icon colors if too bright */
+.dark-mode i[class^="bi"] {
+  color: #ffffff !important;
+}
+
+/* Fix flip visibility */
+.dark-mode .flip-inner,
+.dark-mode .flip-card-inner {
+  backface-visibility: hidden;
+}
+
 
 
 
@@ -1332,9 +1509,9 @@ body {
         <li class="nav-item"><a class="nav-link" href="#academic-projects">Academic Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
-      <button class="btn-theme-glow ms-3" id="themeToggle" aria-label="Toggle Theme">
-        <i class="bi bi-moon-stars" id="themeIcon"></i>
-      </button>
+      <button onclick="toggleDarkMode()" class="btn-theme-glow">
+  <i class="bi bi-moon-stars" id="themeIcon"></i>
+</button>
     </div>
   </div>
 </nav>
@@ -1950,6 +2127,14 @@ body {
     });
   });
 </script>
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+  }
 
+document.getElementById('themeToggle').addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+});
+	</script>
 </body>
 </html>
