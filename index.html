@@ -9,7 +9,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
 
 	/* Base Styling */
@@ -1215,7 +1215,50 @@ body {
     display: flex;
   }
 }
+ .glass-navbar {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      padding: 1rem 2rem;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
 
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.8rem;
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    .nav-link {
+      font-weight: 600;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #007BFF;
+    }
+
+    .nav-link.active {
+      background-color: rgba(0, 123, 255, 0.15);
+      color: #007BFF;
+      border-radius: 8px;
+    }
+
+    .btn-theme-glow {
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    }
 
 
 
@@ -1281,37 +1324,35 @@ body {
  </style>
 </head>
 <body>
-<nav class="glass-navbar">
-  <div class="container"style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+<nav class="navbar navbar-expand-lg sticky-top glass-navbar">
+  <div class="container">
     <a class="navbar-brand" href="#">Rajesh QA</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-    <!-- Hamburger Icon -->
-    <div class="hamburger" id="hamburger">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-
-    <!-- Navigation Links -->
-    <div class="nav-links" id="navLinks">
-      <a class="nav-link" href="#home">Home</a>
-      <a class="nav-link" href="#about">About</a>
-      <a class="nav-link" href="#skills">Skills</a>
-      <a class="nav-link" href="#experience">Experience</a>
-      <a class="nav-link" href="#projects">Projects</a>
-      <a class="nav-link" href="#education">Education</a>
-      <a class="nav-link" href="#academic-projects">Academic Projects</a>
-      <a class="nav-link" href="#contact">Contact</a>
-
-      <button class="btn-theme-glow" id="themeToggle" aria-label="Toggle Theme" style="margin-top: 10px;">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#academic-projects">Academic Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <button class="btn-theme-glow ms-3" id="themeToggle" aria-label="Toggle Theme">
         <i class="bi bi-moon-stars" id="themeIcon"></i>
       </button>
     </div>
   </div>
 </nav>
-  
 
-
+<!-- Just for spacing below navbar -->
+<div style="height:100vh; padding-top:100px;">
+  <h2 id="home">Welcome to Home</h2>
+</div>
 <section id="home" class="hero-section d-flex align-items-center">
   <div class="container text-center position-relative z-2">
     
@@ -1904,6 +1945,21 @@ body {
   });
 </script>
 
+
+<!-- ✅ Bootstrap JS (MUST for navbar toggle to work) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- ✅ Optional: Collapse navbar after clicking a link (mobile only) -->
+<script>
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      if (navbarCollapse.classList.contains('show')) {
+        new bootstrap.Collapse(navbarCollapse).hide();
+      }
+    });
+  });
+</script>
 
 </body>
 </html>
